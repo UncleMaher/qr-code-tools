@@ -5,7 +5,7 @@
   "start_url": "/qr-code-tools/",
   "icons": [
     {
-      "src": "/Images/favicon/web-app-manifest-192x192.png",
+      "src": "Images/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
