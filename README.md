@@ -44,95 +44,47 @@ You have three options to use this QR Code Decoder tool:
 
   
 
-1. **Live Demo**:  
-
-  
-
-   You can check out the live demo by visiting the GitHub Pages of this repository:  
-
-  
-
-   [Live Demo](https://unclemaher.github.io/qr-code-tools/)
+1. **Live Demo**:
+	- You can check out the [Live Demo](https://unclemaher.github.io/qr-code-tools/) of this repository.
 
   
 
   
 
-2. **Download and Run Locally**:  
+2. **Download and Run Locally**:
+		If you'd like to run it locally and use it offline, you can follow these steps:
 
-  
+	
+	- Download the repository as a ZIP file from the [GitHub repo](https://github.com/unclemaher/qr-code-tools).
+	- Unzip the file to a folder on your computer.
+	- Open `index.html` with your browser of choice.
 
-   If you'd like to run it locally and use it offline, you can follow these steps:
 
-  
+3. **Use it offline completely**
 
-   - Download the repository as a ZIP file from the [GitHub repo](https://github.com/unclemaher/qr-code-tools).
+    - To make sure everything works offline, you’ll need to download the required assets in a new directory called `/assets`:
 
-  
+        - **Fonts:**
+            - Download the font from [Google Fonts - Sriracha](https://fonts.google.com/specimen/Sriracha) & [Google Fonts - Roboto](https://fonts.google.com/specimen/Roboto) and save the files in the `/fonts` directory.
 
-   - Unzip the file to a folder on your computer.
+        - **JavaScript:**
+            - Download `jsQR.js` from [jsQR GitHub](https://github.com/cozmo/jsQR) and save it in the `/js` directory.
 
-  
+    - Modify the script tag in `index.html` to load the file locally instead of from the internet by replacing the following:
 
-   - Open `index.html` with your browser of choice.
+    ```html
+    <script src="https://cdn.jsdelivr.net/gh/cozmo/jsQR@master/dist/jsQR.js"></script>
+    ```
 
-  
+    by:
 
-3. **Use it offline completly**
+    ```html
+    <script src="js/jsQR.js"></script>
+    ```
 
-  
+    - After placing the files in their respective folders and modifying the `index.html`, you can use the tool offline without needing an internet connection.
 
-  
-
-    -   To make sure everything works offline, you’ll need to download the required assets in a new directory call/assets:
-
-  
-
-  
-
-        - **Fonts:**
-
-  
-
-            - Download the font from [Google Fonts - Sriracha](https://fonts.google.com/specimen/Sriracha) & [Google Fonts - Roboto](https://fonts.google.com/specimen/Roboto) and save the files in the `/fonts` directory.
-
-  
-
-  
-
-        - **JavaScript:**
-
-  
-
-            - Download `jsQR.js` from [jsQR GitHub](https://github.com/cozmo/jsQR) and save it in the `/js` directory.
-
-  
-
-  
-
-        - **Modify the script tag in *index.html* to load the file locally instead of from the internet by replacing the following:
-
-  
-
-```
-<script src="https://cdn.jsdelivr.net/gh/cozmo/jsQR@master/dist/jsQR.js"></script>
-```
-
-  
-
-        by:
-
-```
-<script src="js/jsQR.js"></script>
-```
-
-    After placing the files in their respective folders and modifying the *index.html*, you can use the tool offline without needing an internet connection.
-
-   
-
-## 📝 Task List
-
-  
+## Task List
 
   
 
@@ -218,7 +170,7 @@ You have three options to use this QR Code Decoder tool:
 
   
 
-## 💡 Privacy Notice
+## Privacy Notice
 
   
 
@@ -230,7 +182,7 @@ The **QR Code tools repo** was designed with privacy in mind. **All QR code scan
 
   
 
-## 📄 License
+## License
 
   
 
@@ -248,10 +200,11 @@ This project is licensed under the GPL 3.0 License.
 
   
 
-- **jsQR.js**: The QR decoding library used in this project. Huge thanks to the contributors behind it! (Check it out on GitHub: [jsQR.js](https://github.com/cozmo/jsQR))
+- The QR decoding library used in this project is [jsQR.js](https://github.com/cozmo/jsQR). Huge thanks to the contributors behind it!
 
+---
   
 
-  
+
 
 Feel free to contribute, report bugs, or open issues if you have any suggestions for improvements!
