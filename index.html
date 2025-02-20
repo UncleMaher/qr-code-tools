@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Decoder - Uncle Maher</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="main-layout">
+        <h1>QR Code Decoder</h1>    
+        <!-- Upload or Paste -->
+        <div id="uploadArea">
+        </div>
+
+        <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+
+        <!-- Buttons -->
+        <br/>
+        <div id="buttonContainer">
+        <button id="decodeButton" disabled>
+            <i class="fa-solid fa-upload fa-beat-fade"></i> Decode
+        </button>
+            
+        <button id="clearButton" disabled>
+            <i class="fa-solid fa-eraser fa-fade"></i> Clear
+        </button>
+        </div>
+        
+        <div id="tooltip">Please select a file first, then click "Decode"!</div>
+
+        <!-- QR Code Result Label and Result Box -->
+        <h3 id="qrCodeLabel">QR Code Data:</h3>
+        <div id="result"></div>
+
+        <!-- Copy result section -->
+        <button id="copyButton"></button>
+        <div id="copyMessage"></div>
+
+    </div>    
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p> Made with &nbsp;<i class="fa-solid fa-heart fa-beat" style="color: #c80000;"></i> by
+            <a href="https://github.com/UncleMaher" target="_blank" class="github-link">/Uncle Maher</a>.
+            <br>
+            Have feedback or question(s)? Please file an isssue on the <a href="https://github.com/UncleMaher/qr-code-tools" target="_blank">GitHub repo</a>. 
+            <br>
+            <i class="fa-regular fa-copyright"></i><span id="currentYear"></span>
+        </p>
+    </footer>
+
+
+    <!-- Scripts -->
+
+    <script src="https://cdn.jsdelivr.net/gh/cozmo/jsQR@master/dist/jsQR.js"></script>
+    <script src="main.js"></script>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

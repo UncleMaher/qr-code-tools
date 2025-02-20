@@ -1,0 +1,275 @@
+/* Global Styles */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(130deg, #161717, #18082c);
+    color: #E0E0E0;
+    margin: 0;
+    font-family: 'Sriracha', sans-serif;
+}
+
+/* Main Layout */
+.main-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Content Area */
+.content {
+    flex-grow: 1;
+}
+
+/* Header */
+h1 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: #00BFAE;
+    margin-bottom: 1.25rem; 
+}
+
+/* Upload Area */
+#uploadArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 2px dashed #FF6F61;
+    border-radius: 8px;
+    background-color: #2E3B3C;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+#uploadArea p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    word-wrap: break-word;
+}
+
+#uploadArea:hover {
+    background-color: #d2574c92;
+    border-color: #D16D5B;
+    transform: scale(1.05);
+}
+
+#uploadArea img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 8px;
+}
+
+/* Input and Text area Focus */
+input[type="file"]:focus, textarea:focus {
+    margin: 10px;
+    padding: 8px;
+    font-size: 0.875rem;
+    border-radius: 8px;
+    border: 1px solid #1E90FF;
+    outline: none;
+    color: #E0E0E0;
+    box-shadow: 0 0 5px rgba(30, 144, 255, 0.8);
+}
+
+#qrCodeLabel {
+    display: none;
+    font-size: 1.25rem;
+    color: #f100b0;
+    margin-top: 15px;
+}
+
+/* Result Box */
+#result {
+    margin-top: 1px;
+    font-size: 1.125rem;
+    color: #E0E0E0;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background-color: #1F1F1F;
+    box-shadow: 0 4px 6px #0000004d;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+}
+
+#result a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+#result a:hover {
+    text-decoration: underline;
+}
+
+#result:hover {
+    background-color: #333333;
+    cursor: pointer;
+    border-color: #1E90FF;
+}
+
+/* Button Layout */
+#buttonContainer {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: white;
+    border: none;
+    margin: 0.75rem;
+    width: 100px;}
+
+
+/* Hover Effects */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Specific Button Types */
+#decodeButton {
+    background-color: #FF6F61;
+}
+
+#decodeButton:hover {
+    background-color: #D16D5B;
+}
+
+#clearButton {
+    background-color: #F39C12;
+}
+
+#clearButton:hover {
+    background-color: #E67E22;
+}
+
+#copyButton {
+    background-color: #27AE60;
+    display: none;
+}
+
+#copyButton:hover {
+    background-color: #2ECC71;
+}
+
+button:disabled {
+    background-color: #555555 !important;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+/* Success Message */
+#copyMessage {
+    margin-top: 10px;
+    color: #27AE60;
+}
+
+/* Effect after Copy */
+.copied-effect {
+    background-color: #D4EDDA;
+    border: 2px solid #28A745;
+    padding: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #19242e;
+    color: #ECF0F1;
+    padding: 5px 15px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    position: relative;
+    line-height: 1.8;
+}
+
+footer i {
+    color: #ECF0F1;
+    margin-right: 5px;
+}
+
+footer a {
+    color: #1E90FF;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #0072e4;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+#currentYear {
+    font-weight: 700;
+}
+
+/* GitHub Link */
+.github-link {
+    display: inline-block;
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 97.6 96" style="enable-background:new 0 0 97.6 96;" width="18" height="18"%3E%3Cpath d="M48.9,0C21.8,0,0,22,0,49.2C0,71,14,89.4,33.4,95.9c2.4,0.5,3.3-1.1,3.3-2.4c0-1.1-0.1-5.1-0.1-9.1c-13.6,2.9-16.4-5.9-16.4-5.9c-2.2-5.7-5.4-7.2-5.4-7.2c-4.4-3,0.3-3,0.3-3c4.9,0.3,7.5,5.1,7.5,5.1c4.4,7.5,11.4,5.4,14.2,4.1c0.4-3.2,1.7-5.4,3.1-6.6c-10.8-1.1-22.2-5.4-22.2-24.3c0-5.4,1.9-9.8,5-13.2c-0.5-1.2-2.2-6.3,0.5-13c0,0,4.1-1.3,13.4,5.1c3.9-1.1,8.1-1.6,12.2-1.6s8.3,0.6,12.2,1.6c9.3-6.4,13.4-5.1,13.4-5.1c2.7,6.8,1,11.8,0.5,13c3.2,3.4,5,7.8,5,13.2c0,18.9-11.4,23.1-22.3,24.3c1.8,1.5,3.3,4.5,3.3,9.1c0,6.6-0.1,11.9-0.1,13.5c0,1.3,0.9,2.9,3.3,2.4C83.6,89.4,97.6,71,97.6,49.2C97.7,22,75.8,0,48.9,0z" style="fill:%23ECF0F1;%22%3E%3C/path%3E%3C/svg%3E');
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-left: 22px;
+    line-height: 18px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.75rem;
+    }
+
+    #uploadArea, textarea {
+        width: 100%;
+        height: 200px;
+    }
+
+    input[type="file"], textarea {
+        width: 100%;
+    }
+
+    button {
+        padding: 0.5rem 1.25rem;
+    }
+}
+
+
+#tooltip {
+    font-size: 0.9rem;
+    color: #E74C3C;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 3s ease;
+    text-align: left;
+}
+
+#tooltip.show {
+    opacity: 1;
+    visibility: visible;
+}
