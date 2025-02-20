@@ -126,6 +126,10 @@ You have three options to use this QR Code Decoder tool:
 
   
 
+- [x] Manifest
+
+  
+
 - [x] Add more styling and improve user experience.
 
   
